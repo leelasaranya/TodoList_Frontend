@@ -1,0 +1,159 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.app-container {
+  background: #ffffff;
+  width: 380px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ===== SWITCH LOGIN / REGISTER ===== */
+.switch-btn {
+  background: transparent;
+  color: #667eea;
+  margin-top: 15px;
+}
+
+.switch-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+/* ===== TODO SECTION ===== */
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  width: auto;
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #e53e3e;
+}
+
+.logout-btn:hover {
+  background: #c53030;
+}
+
+/* ===== ADD TODO ===== */
+.todo-input {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.todo-input input {
+  flex: 1;
+}
+
+.todo-input button {
+  width: 90px;
+}
+
+/* ===== TODO LIST ===== */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  background: #f7f7f7;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  animation: slideUp 0.3s ease;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
